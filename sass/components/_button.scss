@@ -1,0 +1,41 @@
+.btn {
+    border-radius: 25px;
+    // background: linear-gradient(#FF79DA, #9356DC);
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0px 2px 10px rgb(133 132 132);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin: auto;
+    margin-top: 40px;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 250ms;
+    :hover {
+        &::after {
+            opacity: 1;
+        }
+    } 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: darken(#9356DC, 10);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+    
+    @media (min-width: 600px) {
+        width: 365px;
+        height: 50px;
+    }
+}

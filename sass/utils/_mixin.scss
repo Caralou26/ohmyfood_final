@@ -1,0 +1,16 @@
+// $breakpoints: (
+// ipad: 600px,
+// desktop: 1000px 
+// );
+
+// @mixin ipad {
+//     @media screen and (min-width: map-get($breakpoints, ipad)) {
+//       @content;
+//     }
+//   }
+
+// @mixin desktop {
+//     @media screen and (min-width: map-get($breakpoints,desktop)) {
+//         @content;
+//     }
+// }

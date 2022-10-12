@@ -1,0 +1,28 @@
+header {
+    text-align: center;
+    padding: 10px;
+    img {
+        width: 150px;
+        height: auto;
+    }  
+}
+
+.header_restau {
+    display: flex;
+    align-items: center;
+    i{
+        padding-left: 10px;
+        font-size: 20px;
+        justify-content: flex-start;
+    }
+
+    a:last-child {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    img { 
+    width: 150px;
+    position: relative;
+    }
+}
