@@ -54,7 +54,7 @@ footer ul a i {
 
 .btn {
   border-radius: 25px;
-  background-color: red;
+  background-color: #9356DC;
   color: white;
   text-decoration: none;
   box-shadow: 0px 2px 10px rgb(133, 132, 132);
@@ -65,10 +65,9 @@ footer ul a i {
   height: 50px;
   margin: auto;
   margin-top: 40px;
-  z-index: 0;
+  z-index: 1;
   position: relative;
   cursor: pointer;
-  transition: background-color 250ms;
 }
 .btn :hover::after {
   opacity: 1;
@@ -94,8 +93,7 @@ footer ul a i {
 
 .img_restaurant img {
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #carte {
@@ -133,10 +131,25 @@ footer ul a i {
 #carte .title h1 {
   padding-left: 15px;
 }
-#carte .title i {
-  padding-right: 30px;
+#carte .title .restaurants__card--heart {
+  margin-right: 70px;
+  position: relative;
+}
+#carte .title .restaurants__card--heart-default {
   font-size: 30px;
-  font-weight: lighter;
+  position: absolute;
+  z-index: 0;
+}
+#carte .title .restaurants__card--heart-color {
+  font-size: 30px;
+  position: absolute;
+  color: #99E2D0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#carte .title .restaurants__card--heart-color:hover {
+  opacity: 1;
 }
 @media (min-width: 1000px) {
   #carte {
@@ -190,6 +203,70 @@ footer ul a i {
   padding-bottom: 60px;
 }
 
+.white {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  background-color: white;
+  opacity: 0.8;
+  animation: home 4s linear forwards;
+}
+
+.load {
+  width: 20vh;
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.load__bar {
+  background-color: #9356DC;
+  height: 100%;
+  width: 2vh;
+  animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes home {
+  0% {
+    z-index: 10;
+  }
+  80% {
+    z-index: 10;
+    opacity: 0.8;
+  }
+  90% {
+    z-index: 10;
+    opacity: 0.7;
+  }
+  100% {
+    z-index: -1;
+  }
+}
 body {
   margin: auto;
   font-family: "Roboto", sans-serif;
@@ -205,7 +282,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(217, 217, 217);
+  background-color: rgb(231, 231, 231);
   box-shadow: inset 0px 2px 4px rgb(183, 181, 181);
 }
 .location i {
@@ -215,7 +292,7 @@ body {
 
 .browse {
   text-align: center;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(242, 241, 241);
   padding: 5% 12% 5% 12%;
 }
 .browse h2 {
@@ -247,7 +324,7 @@ body {
   display: flex;
   align-items: center;
   width: 95%;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(242, 241, 241);
   margin: auto;
   position: relative;
   margin-bottom: 20px;
@@ -268,7 +345,7 @@ body {
   }
 }
 .introduction .introduction__etape1 .numero, .introduction .introduction__etape2 .numero, .introduction .introduction__etape3 .numero {
-  background-color: #ffc0cb;
+  background-color: #9356DC;
   width: 28px;
   height: 28px;
   text-align: center;
@@ -295,7 +372,7 @@ body {
 
 .restaurants {
   padding: 5%;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(242, 241, 241);
 }
 .restaurants h3 {
   font-size: 24px;
@@ -313,8 +390,7 @@ body {
 .restaurants .restaurants__card img, .restaurants a img {
   width: 100%;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
 .restaurants .restaurants__card span, .restaurants a span {
@@ -343,7 +419,27 @@ body {
 .restaurants .restaurants__card .text p, .restaurants a .text p {
   margin: 5px;
 }
-.restaurants .restaurants__card i, .restaurants a i {
-  padding-right: 10px;
+.restaurants .restaurants__card .restaurants__card--heart, .restaurants a .restaurants__card--heart {
+  position: relative;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+}
+.restaurants .restaurants__card .restaurants__card--heart-default, .restaurants a .restaurants__card--heart-default {
   font-size: 25px;
-}/*# sourceMappingURL=main.css.map */
+  position: absolute;
+  z-index: 0;
+}
+.restaurants .restaurants__card .restaurants__card--heart-color, .restaurants a .restaurants__card--heart-color {
+  font-size: 25px;
+  position: absolute;
+  color: #99E2D0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.restaurants .restaurants__card .restaurants__card--heart-color:hover, .restaurants a .restaurants__card--heart-color:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

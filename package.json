@@ -2,9 +2,9 @@
   "name": "ohmyfood_v2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css" 
+    "sass": "sass --watch ./sass/main.scss:./css/main.css" 
   },
   "author": "",
   "license": "ISC"

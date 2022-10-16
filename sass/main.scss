@@ -2,9 +2,9 @@
 @import "./layout/header";
 @import "./layout/footer";
 @import "./components/button";
-@import "./restaurants.scss";
-@import "./utils/variables.scss";
-@import "./utils/mixin.scss";
+@import "./restaurants";
+@import "./utils/variables";
+@import "./utils/mixin";
 @import "./animations/loading";
 
 // Home Page
@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: pink;
+    background-color: $color-dark-background;
     box-shadow: inset 0px 2px 4px rgb(183 181 181);
     i {
         padding-right: 10px;
@@ -160,9 +160,27 @@ body {
         .text p {
             margin: 5px;
         }
-        i {
-            padding-right: 10px;
-            font-size: 25px;
+        .restaurants__card--heart {
+            position: relative;
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            &-default{
+                font-size: 25px;
+                position: absolute;
+                z-index: 0;
+            }
+            &-color {
+                font-size: 25px;
+                position: absolute;
+                color: $color-tertiaire;
+                z-index: 2;
+                opacity: 0;
+                transition: opacity 1s;
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
- }
+}

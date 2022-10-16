@@ -1,7 +1,6 @@
 .btn {
     border-radius: 25px;
-    // background: linear-gradient(#FF79DA, #9356DC);
-    background-color: red;
+    background-color: #9356DC;
     color: white;
     text-decoration: none;
     box-shadow: 0px 2px 10px rgb(133 132 132);
@@ -12,10 +11,9 @@
     height: 50px;
     margin: auto;
     margin-top: 40px;
-    z-index: 0;
+    z-index: 1;
     position: relative;
     cursor: pointer;
-    transition: background-color 250ms;
     :hover {
         &::after {
             opacity: 1;
