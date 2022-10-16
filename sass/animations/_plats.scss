@@ -1,0 +1,28 @@
+.plat_1 {
+    animation: appearance 2s 200ms both;
+}
+
+.plat_2 {
+    animation: appearance 2s 400ms both;
+}
+
+.plat_3 {
+    animation: appearance 2s 600ms both;
+}
+
+.plat_4 {
+    animation: appearance 2s 800ms both;
+}
+
+@keyframes appearance {
+
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+}

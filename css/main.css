@@ -54,7 +54,7 @@ footer ul a i {
 
 .btn {
   border-radius: 25px;
-  background-color: #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   text-decoration: none;
   box-shadow: 0px 2px 10px rgb(133, 132, 132);
@@ -65,24 +65,11 @@ footer ul a i {
   height: 50px;
   margin: auto;
   margin-top: 40px;
-  z-index: 1;
-  position: relative;
   cursor: pointer;
 }
-.btn :hover::after {
-  opacity: 1;
-}
-.btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #782cd3;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 250ms;
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0px 2px 10px rgb(0, 0, 0);
 }
 @media (min-width: 600px) {
   .btn {
@@ -184,19 +171,24 @@ footer ul a i {
   box-shadow: 3px 3px 10px rgb(219, 216, 216);
   background-color: white;
   font-size: 14px;
-  justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 12px;
+  overflow: hidden;
 }
 #entrees .plat .plat_title, #plats .plat .plat_title, #desserts .plat .plat_title {
   padding-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #entrees .plat .plat_title p, #plats .plat .plat_title p, #desserts .plat .plat_title p {
   margin-top: -8px;
   font-weight: lighter;
+  text-overflow: ellipsis;
 }
 #entrees .plat .price, #plats .plat .price, #desserts .plat .price {
-  padding-right: 20px;
+  margin-left: auto;
+  padding: 1rem;
 }
 
 .bottom {
@@ -265,6 +257,66 @@ footer ul a i {
   }
   100% {
     z-index: -1;
+  }
+}
+.plat_1 {
+  animation: appearance 2s 200ms both;
+}
+
+.plat_2 {
+  animation: appearance 2s 400ms both;
+}
+
+.plat_3 {
+  animation: appearance 2s 600ms both;
+}
+
+.plat_4 {
+  animation: appearance 2s 800ms both;
+}
+
+@keyframes appearance {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.plat:hover .validation {
+  margin-right: 0px;
+}
+.plat:hover i {
+  animation: check 500ms ease-in-out;
+}
+
+.validation {
+  background-color: #99E2D0;
+  margin-right: -55px;
+  width: 55px;
+  height: 76px;
+  border-radius: 0px 10px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: margin-right 500ms;
+}
+
+.fa-circle-check {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+@keyframes check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 body {

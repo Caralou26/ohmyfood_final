@@ -1,0 +1,36 @@
+.plat {
+    &:hover .validation {
+        margin-right:0px;
+    }
+    &:hover i{
+        animation: check 500ms ease-in-out;
+    }
+}
+
+.validation {
+    background-color: $color-tertiaire;
+    margin-right: -55px;
+    width: 55px;
+    height: 76px;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: margin-right 500ms;
+}
+
+.fa-circle-check{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+  }
+
+  @keyframes check {
+    0% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
