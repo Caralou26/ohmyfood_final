@@ -95,6 +95,8 @@
                     margin-top: -8px;
                     font-weight: lighter;
                     text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
             }
             .price {
