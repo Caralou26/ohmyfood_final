@@ -187,6 +187,8 @@ footer ul a i {
   margin-top: -8px;
   font-weight: lighter;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #entrees .plat .price, #plats .plat .price, #desserts .plat .price {
   margin-left: auto;
@@ -464,7 +466,7 @@ body {
   top: 12px;
 }
 .restaurants .restaurants__card span :hover, .restaurants a span :hover {
-  font-weight: 800px;
+  font-weight: 800;
   color: #9356DC;
 }
 .restaurants .restaurants__card .description, .restaurants a .description {
