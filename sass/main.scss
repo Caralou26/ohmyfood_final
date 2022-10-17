@@ -116,6 +116,10 @@ body {
 
 .restaurants {
     padding: 5%;
+    @media (min-width: 1000px) {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
     background-color:$color-light-background;
     h3 {
         font-size: 24px;
