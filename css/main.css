@@ -202,11 +202,12 @@ footer ul a i {
   justify-content: space-around;
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 100%;
   align-items: center;
   background-color: white;
   opacity: 0.8;
   animation: home 4s linear forwards;
+  position: fixed;
 }
 
 .load {
