@@ -465,10 +465,6 @@ body {
   right: 15px;
   top: 12px;
 }
-.restaurants .restaurants__card span :hover, .restaurants a span :hover {
-  font-weight: 800;
-  color: #9356DC;
-}
 .restaurants .restaurants__card .description, .restaurants a .description {
   padding: 10px 15px 15px 15px;
   display: flex;
