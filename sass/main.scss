@@ -78,6 +78,13 @@ body {
         margin-bottom: 20px;
         border-radius: 15px;
         box-shadow: 3px 3px 10px rgb(219 217 217);
+        &:hover {
+            background-color: #dfcaf9;
+            cursor: pointer;
+            i {
+                color: $color-primaire;
+            }
+        }
         @media (min-width: 600px) {
             width: 513px;
             height: auto;
@@ -178,7 +185,10 @@ body {
             &-color {
                 font-size: 25px;
                 position: absolute;
-                color: $color-tertiaire;
+                color: transparent;
+                background: $color-gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
                 z-index: 2;
                 opacity: 0;
                 transition: opacity 1s;

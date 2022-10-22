@@ -132,7 +132,10 @@ footer ul a i {
 #carte .title .restaurants__card--heart-color {
   font-size: 30px;
   position: absolute;
-  color: #99E2D0;
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
   z-index: 2;
   opacity: 0;
   transition: opacity 1s;
@@ -352,7 +355,7 @@ body {
 
 .browse {
   text-align: center;
-  background-color: rgb(242, 241, 241);
+  background-color: rgb(240, 240, 240);
   padding: 5% 12% 5% 12%;
 }
 .browse h2 {
@@ -384,12 +387,19 @@ body {
   display: flex;
   align-items: center;
   width: 95%;
-  background-color: rgb(242, 241, 241);
+  background-color: rgb(240, 240, 240);
   margin: auto;
   position: relative;
   margin-bottom: 20px;
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgb(219, 217, 217);
+}
+.introduction .introduction__etape1:hover, .introduction .introduction__etape2:hover, .introduction .introduction__etape3:hover {
+  background-color: #dfcaf9;
+  cursor: pointer;
+}
+.introduction .introduction__etape1:hover i, .introduction .introduction__etape2:hover i, .introduction .introduction__etape3:hover i {
+  color: #9356DC;
 }
 @media (min-width: 600px) {
   .introduction .introduction__etape1, .introduction .introduction__etape2, .introduction .introduction__etape3 {
@@ -432,7 +442,7 @@ body {
 
 .restaurants {
   padding: 5%;
-  background-color: rgb(242, 241, 241);
+  background-color: rgb(240, 240, 240);
 }
 @media (min-width: 1000px) {
   .restaurants {
@@ -495,7 +505,10 @@ body {
 .restaurants .restaurants__card .restaurants__card--heart-color, .restaurants a .restaurants__card--heart-color {
   font-size: 25px;
   position: absolute;
-  color: #99E2D0;
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
   z-index: 2;
   opacity: 0;
   transition: opacity 1s;

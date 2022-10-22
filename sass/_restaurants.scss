@@ -1,3 +1,5 @@
+@import "./utils/variables";
+
 .img_restaurant img {
     height: 300px;
     object-fit: cover;
@@ -44,7 +46,10 @@
             &-color {
             font-size: 30px;
             position: absolute;
-            color: #99E2D0;
+            color: transparent;
+            background: $color-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
             z-index: 2;
             opacity: 0;
             transition: opacity 1s;
